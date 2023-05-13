@@ -1,0 +1,128 @@
+.component {
+  padding: 0% 5%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  .header {
+    padding: 3% 0px;
+  }
+
+  .main {
+    margin: 2%;
+    padding: 4%;
+    background-color: white;
+
+    .sub-main {
+      display: flex;
+      flex-direction: row;
+      opacity: 1;
+
+      .item1 {
+        width: 50%;
+        padding-right: 30px;
+
+        h2 {
+          font-size: 3.5rem;
+          font-weight: 300;
+          padding-bottom: 3%;
+        }
+        h3 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding-bottom: 20%;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+      }
+      .item2 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  button {
+    padding: 20px 60px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2px;
+    margin: 10% 5%;
+  }
+}
+
+.sub-main.animate {
+  animation-name: myanimation;
+  animation-fill-mode: both;
+  animation-duration: 1000ms;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+
+@keyframes myanimation {
+  0% {
+    transform: translate3d(0px, 100%, 0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .component {
+    .main {
+      .sub-main {
+        display: flex;
+        flex-direction: column;
+
+        .item1 {
+          width: 100%;
+          h3 {
+            padding-bottom: 10%;
+          }
+        }
+        .item2 {
+          width: 100%;
+          padding-top: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .component{
+    .main{
+      .sub-main{
+        .item1{
+          h2{
+            font-size: 1.5rem;
+          }
+          h3{
+            font-size: 1rem;
+          }
+          a{
+            font-size: 1rem;
+          }
+        }
+        .item2{
+          img{
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
